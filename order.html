@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Custom Clothing</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+            <h1>TailorPro</h1>
+    </header>
+
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+        <form action="submit_order.php" method="POST" enctype="multipart/form-data">
+            <label>Customer Name:</label>
+            <input type="text" name="customer_name" required>
+        
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        
+            <label>Phone Number:</label>
+            <input type="text" name="phone" required>
+        
+            <label>Fabric:</label>
+            <input type="text" name="fabric" required>
+        
+            <label>Color:</label>
+            <input type="text" name="color" required>
+        
+            <label>Measurements:</label>
+            <textarea name="measurements" required></textarea>
+        
+            <label>Reference Image:</label>
+            <input type="file" name="reference_image" required>
+        
+            <button type="submit">Place Order</button>
+        </form>
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

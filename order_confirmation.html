@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - TailorPro</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+    <section class="order-confirmation">
+        <h2>Order Confirmation</h2>
+        <p><strong>Fabric:</strong> Cotton</p>
+        <p><strong>Color:</strong> Blue</p>
+        <p><strong>Measurements:</strong> Provided</p>
+        <p><strong>Reference Image:</strong> <a href="#">View Image</a></p>
+        <p><strong>Total Price:</strong> Ksh <span id="total-price">5000</span></p>
+        <p><strong>Amount to Pay (50%):</strong> Ksh <span id="half-price">2500</span></p>
+
+        <h3>Payment Instructions:</h3>
+        <p>Send Ksh <strong>2500</strong> to the M-Pesa Paybill Number: <strong>247247</strong> and Account Number: <strong>TailorPro</strong> </p>
+        
+        <label for="mpesa-code">Enter M-Pesa Transaction Code:</label>
+        <input type="text" id="mpesa-code" placeholder="e.g. QWE123XYZ456">
+        <button onclick="submitPayment()">Submit Payment</button>
+    </section>
+
+    <script>
+        function submitPayment() {
+            let transactionCode = document.getElementById("mpesa-code").value;
+            if(transactionCode.trim() === "") {
+                alert("Please enter your M-Pesa transaction code.");
+                return;
+            }
+            alert("Payment submitted successfully. Your order is now being processed.");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black; /* Solid black background */
+    color: white;
+}
+
+/* HEADER STYLING */
+header {
+    display: flex;
+    justify-content: space-between; /* Keeps TailorPro on the left, nav on the right */
+    align-items: center;
+    padding: 20px 5%; /* Reduced padding to prevent links from going outside */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 1000;
+}
+
+/* "TailorPro" stays on the top left */
+.header-left h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+/* Keep navigation inside the header */
+.header-right {
+    flex-grow: 1; /* Allows it to take up available space */
+    display: flex;
+    justify-content: flex-end; /* Pushes links to the right but within limits */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Adjust spacing between links */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4fa3d1;
+}
+
+/* Push hero section down to avoid overlap */
+.hero {
+    margin-top: 80px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text left, image right */
+    padding: 0 10%;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero h3 {
+    color: #4fa3d1;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background: #4fa3d1;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #3b82a7;
+}
+
+.btn-outline {
+    border: 2px solid #4fa3d1;
+    color: #4fa3d1;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #4fa3d1;
+    color: white;
+}
+
+/* Image container */
+.hero-image {
+    width: 40%;
+    position: relative;
+}
+
+/* Image styling with blend effect */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(80%) contrast(1.1); /* Adjust image tone */
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 40%);
+    
+    /* Remove border lines */
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
