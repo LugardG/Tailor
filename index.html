@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TailorPro</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Custom-Made Elegance</h2>
+            <h3>Expert Tailoring for Every Occasion</h3>
+            <p>Experience top-notch craftsmanship with personalized designs. Choose your fabric, color, and measurements to get your perfect fit.</p>
+            <div class="buttons">
+                <a href="order.html" class="btn">Make an Order</a>
+                <a href="contact.html" class="btn-outline">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Tailors_background.jpeg" alt="Tailor">
+        </div>
+    </section>
+
+    <!-- Order Status Section -->
+    <section id="check-order">
+        <h2>Check Your Order Status</h2>
+        <form action="check_order.php" method="GET">
+            <input type="text" name="contact" placeholder="Enter your Email or Phone" required>
+            <button type="submit" class="btn">Check Status</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
